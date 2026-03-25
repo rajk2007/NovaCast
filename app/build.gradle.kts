@@ -161,7 +161,7 @@ android {
         }
     }
 
-    namespace = "com.lagradost.cloudstream3"
+    namespace = "com.rajk2007.novacast"
 }
 
 dependencies {
@@ -266,8 +266,8 @@ tasks.withType<KotlinJvmCompile> {
         jvmDefault.set(JvmDefaultMode.ENABLE)
         freeCompilerArgs.add("-Xannotation-default-target=param-property")
         optIn.addAll(
-            "com.lagradost.cloudstream3.InternalAPI",
-            "com.lagradost.cloudstream3.Prerelease",
+            "com.rajk2007.novacast.InternalAPI",
+            "com.rajk2007.novacast.Prerelease",
         )
     }
 }
@@ -284,7 +284,7 @@ dokka {
 
             sourceLink {
                 localDirectory = file("..")
-                remoteUrl("https://github.com/recloudstream/cloudstream/tree/master")
+                remoteUrl("https://github.com/renovacast/novacast/tree/master")
                 remoteLineSuffix = "#L"
             }
         }

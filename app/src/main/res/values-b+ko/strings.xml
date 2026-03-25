@@ -14,8 +14,8 @@
     <string name="new_update_format" formatted="true">새로운 업데이트!
 \n%1$s -&gt; %2$s</string>
     <string name="duration_format" formatted="true">%d분</string>
-    <string name="app_name">CloudStream</string>
-    <string name="play_with_app_name">CloudStream에서 재생</string>
+    <string name="app_name">NovaCast</string>
+    <string name="play_with_app_name">NovaCast에서 재생</string>
     <string name="title_home">홈</string>
     <string name="title_downloads">다운로드</string>
     <string name="title_settings">설정</string>
@@ -297,7 +297,7 @@
     <string name="delete_repository">저장소 삭제</string>
     <string name="setup_extensions_subtext">사용하려는 사이트 목록 다운로드</string>
     <string name="plugins_downloaded" formatted="true">다운로드됨: %d</string>
-    <string name="blank_repo_message">CloudStream에는 기본적으로 설치된 사이트가 없습니다. 저장소에서 사이트를 설치해야 합니다.
+    <string name="blank_repo_message">NovaCast에는 기본적으로 설치된 사이트가 없습니다. 저장소에서 사이트를 설치해야 합니다.
 \n
 \nSky UK Limited의 무분별한 DMCA 게시 중단으로 인해 앱에서 저장소 사이트를 연결 할 수 없습니다.
 \n
@@ -305,7 +305,7 @@
     <string name="view_public_repositories_button">커뮤니티 저장소 보기</string>
     <string name="view_public_repositories_button_short">공개 목록</string>
     <string name="uppercase_all_subtitles">모든 자막 대문자화</string>
-    <string name="download_all_plugins_from_repo">경고: CloudStream은 제3자 확장을 이용하여 어떠한 책임도 지지 않습니다!</string>
+    <string name="download_all_plugins_from_repo">경고: NovaCast은 제3자 확장을 이용하여 어떠한 책임도 지지 않습니다!</string>
     <string name="single_plugin_disabled" formatted="true">%s (사용불가)</string>
     <string name="add_repository">저장소 추가</string>
     <string name="repository_name_hint">저장소 이름 (선택 사항)</string>
@@ -547,7 +547,7 @@
     <string name="ok">확인</string>
     <string name="battery_dialog_title">배터리 최적화 사용 안 함</string>
     <string name="app_unrestricted_toast">앱 배터리 사용량이 이미 무제한으로 설정되었습니다</string>
-    <string name="app_info_intent_error">CloudStream의 App 정보를 열 수 없습니다.</string>
+    <string name="app_info_intent_error">NovaCast의 App 정보를 열 수 없습니다.</string>
     <string name="favorite_added">즐겨찾기에 %s 추가</string>
     <string name="profile_number">프로필 %d</string>
     <string name="profile_background_des">프로필 배경</string>

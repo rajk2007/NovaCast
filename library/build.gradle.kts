@@ -20,7 +20,7 @@ kotlin {
     version = "1.0.1"
 
     android {
-        // If this is the same com.lagradost.cloudstream3.R stops working
+        // If this is the same com.rajk2007.novacast.R stops working
         namespace = "com.lagradost.api"
 
         compileSdk = libs.versions.compileSdk.get().toInt()
@@ -47,8 +47,8 @@ kotlin {
     sourceSets {
         all {
             languageSettings {
-                optIn("com.lagradost.cloudstream3.InternalAPI")
-                optIn("com.lagradost.cloudstream3.Prerelease")
+                optIn("com.rajk2007.novacast.InternalAPI")
+                optIn("com.rajk2007.novacast.Prerelease")
             }
         }
 
@@ -106,7 +106,7 @@ dokka {
 
             sourceLink {
                 localDirectory = file("..")
-                remoteUrl("https://github.com/recloudstream/cloudstream/tree/master")
+                remoteUrl("https://github.com/renovacast/novacast/tree/master")
                 remoteLineSuffix = "#L"
             }
         }

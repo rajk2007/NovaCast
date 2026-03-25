@@ -33,7 +33,7 @@
     <!-- Without the large heap Exoplayer buffering gets reset due to OOM. -->
     <!--TODO https://stackoverflow.com/questions/41799732/chromecast-button-not-visible-in-android-->
     <application
-        android:name=".CloudStreamApp"
+        android:name=".NovaCastApp"
         android:allowBackup="true"
         android:appCategory="video"
         android:banner="@mipmap/ic_banner"
@@ -51,7 +51,7 @@
 
         <meta-data
             android:name="com.google.android.gms.cast.framework.OPTIONS_PROVIDER_CLASS_NAME"
-            android:value="com.lagradost.cloudstream3.utils.CastOptionsProvider" />
+            android:value="com.rajk2007.novacast.utils.CastOptionsProvider" />
 
         <profileable
             android:shell="true"
@@ -64,7 +64,7 @@
             android:resizeableActivity="true"
             android:screenOrientation="userLandscape"
             android:supportsPictureInPicture="true"
-            android:taskAffinity="com.lagradost.cloudstream3.downloadedplayer"
+            android:taskAffinity="com.rajk2007.novacast.downloadedplayer"
             android:launchMode="singleTask"
             tools:ignore="DiscouragedApi">
             <intent-filter>
@@ -117,14 +117,14 @@
             android:resizeableActivity="true"
             android:supportsPictureInPicture="true">
 
-            <!-- cloudstreamplayer://encodedUrl?name=Dune -->
+            <!-- novacastplayer://encodedUrl?name=Dune -->
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
 
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
 
-                <data android:scheme="cloudstreamplayer" />
+                <data android:scheme="novacastplayer" />
             </intent-filter>
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
@@ -132,7 +132,7 @@
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
 
-                <data android:scheme="cloudstreamapp" />
+                <data android:scheme="novacastapp" />
             </intent-filter>
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
@@ -140,7 +140,7 @@
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
 
-                <data android:scheme="cloudstreamrepo" />
+                <data android:scheme="novacastrepo" />
             </intent-filter>
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
@@ -150,18 +150,18 @@
 
                 <data android:scheme="csshare" />
             </intent-filter>
-            <!-- Allow searching with intents: cloudstreamsearch://Your%20Name -->
+            <!-- Allow searching with intents: novacastsearch://Your%20Name -->
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
 
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
 
-                <data android:scheme="cloudstreamsearch" />
+                <data android:scheme="novacastsearch" />
             </intent-filter>
 
             <!--
-            Allow opening from continue watching with intents: cloudstreamsearch://1234
+            Allow opening from continue watching with intents: novacastsearch://1234
             Used on Android TV Watch Next
              -->
             <intent-filter>
@@ -170,7 +170,7 @@
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
 
-                <data android:scheme="cloudstreamcontinuewatching" />
+                <data android:scheme="novacastcontinuewatching" />
             </intent-filter>
 
             <intent-filter>
