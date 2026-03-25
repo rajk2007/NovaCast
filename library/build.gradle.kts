@@ -106,7 +106,7 @@ dokka {
 
             sourceLink {
                 localDirectory = file("..")
-                remoteUrl("https://github.com/renovacast/novacast/tree/master")
+                remoteUrl("https://github.com/cloudstream/cloudstream/tree/master")
                 remoteLineSuffix = "#L"
             }
         }
