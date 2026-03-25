@@ -21,6 +21,7 @@ jobs:
           ./gradlew assembleDebug
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          JITPACK_TOKEN: ${{ secrets.JITPACK_TOKEN }}
           CI: true
           
       - name: Upload APK
