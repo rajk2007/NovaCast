@@ -68,26 +68,26 @@
         <Preference
             android:icon="@drawable/ic_github_logo"
             android:title="@string/github"
-            app:summary="https://github.com/rajk2007/StreamZen">
+            app:summary="https://github.com/rajk2007/NovaCast">
             <intent
                 android:action="android.intent.action.VIEW"
-                android:data="https://github.com/rajk2007/StreamZen" />
+                android:data="https://github.com/rajk2007/NovaCast" />
         </Preference>
         <Preference
             android:icon="@drawable/ic_baseline_discord_24"
             android:title="@string/discord"
-            app:summary="https://t.me/streamzen_official">
+            app:summary="https://t.me/novacast_official">
             <intent
                 android:action="android.intent.action.VIEW"
-                android:data="https://t.me/streamzen_official" />
+                android:data="https://t.me/novacast_official" />
         </Preference>
         <Preference
             android:icon="@drawable/baseline_description_24"
             android:title="@string/cs3wiki"
-            app:summary="https://github.com/rajk2007/StreamZen">
+            app:summary="https://github.com/rajk2007/NovaCast">
             <intent
                 android:action="android.intent.action.VIEW"
-                android:data="https://github.com/rajk2007/StreamZen" />
+                android:data="https://github.com/rajk2007/NovaCast" />
         </Preference>
     </PreferenceCategory>
 </PreferenceScreen>

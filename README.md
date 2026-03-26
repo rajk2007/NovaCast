@@ -1,14 +1,14 @@
-# StreamZen 🎬
+# NovaCast 🎬
 
 **⚠️ Warning: By default, this app doesn't provide any video sources; 
 you have to install extensions to add functionality to the app.**
 
-## About StreamZen
+## About NovaCast
 
-**StreamZen is a free, open-source Android streaming app that prioritizes 
+**NovaCast is a free, open-source Android streaming app that prioritizes 
 complete freedom and flexibility for users and developers.**
 
-StreamZen is an extension-based multimedia player with plugin support.
+NovaCast is an extension-based multimedia player with plugin support.
 There are extensions to view videos from Movies, TV Shows, Anime, 
 Hindi content, Live TV, IPTV, Sports, Torrents and more.
 
@@ -26,7 +26,7 @@ Hindi content, Live TV, IPTV, Sports, Torrents and more.
 Download the latest APK from [Releases](../../releases)
 
 After installing:
-1. Open StreamZen
+1. Open NovaCast
 2. Go to Settings → Extensions
 3. Tap Add Repository
 4. Add your preferred repo (see below)

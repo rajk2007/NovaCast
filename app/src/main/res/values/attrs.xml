@@ -54,6 +54,8 @@
         <attr name="download_icon_paused" format="reference" />
     </declare-styleable>
 
+    <attr name="cpv_focusBorderColor" format="color" />
+
     <declare-styleable name="MainColors">
         <attr name="colorPrimary" format="color" />
         <attr name="colorSearch" format="color" />

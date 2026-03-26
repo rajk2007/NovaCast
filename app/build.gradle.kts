@@ -59,7 +59,7 @@ android {
     compileSdk = libs.versions.compileSdk.get().toInt()
 
     defaultConfig {
-        applicationId = "com.raj.streamzen"
+        applicationId = "com.rajk2007.novacast"
         minSdk = libs.versions.minSdk.get().toInt()
         targetSdk = libs.versions.targetSdk.get().toInt()
         versionCode = 67
@@ -103,7 +103,7 @@ android {
         debug {
             isDebuggable = true
             applicationIdSuffix = ""
-            resValue("string", "app_name", "StreamZen")
+            resValue("string", "app_name", "NovaCast")
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
