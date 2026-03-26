@@ -221,7 +221,7 @@ dependencies {
     implementation(libs.zipline)
 
     // Torrent Support
-    implementation(libs.torrentserver)
+    // implementation(libs.torrentserver) // Removed due to private dependency issues
 
     // Downloading & Networking
     implementation(libs.work.runtime.ktx)

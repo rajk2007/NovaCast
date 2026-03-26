@@ -7,7 +7,7 @@ appcompat = "1.7.1"
 biometric = "1.4.0-alpha05"
 buildkonfigGradlePlugin = "0.17.1"
 coil = "3.3.0"
-colorpicker = "6b46b49bd5"
+colorpicker = "0.0.15"
 conscryptAndroid = { strictly = "2.5.2" } # 2.5.3 crashes everything
 constraintlayout = "2.2.1"
 coreKtx = "1.17.0"
@@ -41,7 +41,7 @@ rhino = { strictly = "1.8.1" } # Requires minSdk 26 or later beginning at versio
 safefile = "0.0.8"
 shimmer = "0.5.0"
 tmdbJava = "2.13.0"
-torrentserver = "7861970e038b35cd8c6918384e49caf26903e09e"
+# torrentserver = "7861970e038b35cd8c6918384e49caf26903e09e"
 tvprovider = "1.1.0"
 video = "1.0.0"
 workRuntimeKtx = "2.11.1"
@@ -59,7 +59,7 @@ appcompat = { module = "androidx.appcompat:appcompat", version.ref = "appcompat"
 biometric = { module = "androidx.biometric:biometric", version.ref = "biometric" }
 coil = { module = "io.coil-kt.coil3:coil", version.ref = "coil" }
 coil-network-okhttp = { module = "io.coil-kt.coil3:coil-network-okhttp", version.ref = "coil" }
-colorpicker = { module = "com.github.cloudstream:color-picker-android", version.ref = "colorpicker" }
+colorpicker = { module = "com.github.QuadFlask:colorpicker", version.ref = "colorpicker" }
 conscrypt-android = { module = "org.conscrypt:conscrypt-android", version.ref = "conscryptAndroid" }
 constraintlayout = { module = "androidx.constraintlayout:constraintlayout", version.ref = "constraintlayout" }
 core = { module = "androidx.test:core" }
@@ -105,7 +105,7 @@ rhino = { module = "org.mozilla:rhino", version.ref = "rhino" }
 safefile = { module = "com.github.LagradOst:SafeFile", version.ref = "safefile" }
 shimmer = { module = "com.facebook.shimmer:shimmer", version.ref = "shimmer" }
 tmdb-java = { module = "com.uwetrottmann.tmdb2:tmdb-java", version.ref = "tmdbJava" }
-torrentserver = { module = "com.github.cloudstream:torrentserver", version.ref = "torrentserver" }
+# torrentserver = { module = "com.github.cloudstream:torrentserver", version.ref = "torrentserver" }
 tvprovider = { module = "androidx.tvprovider:tvprovider", version.ref = "tvprovider" }
 video = { module = "com.google.android.mediahome:video", version.ref = "video" }
 work-runtime-ktx = { module = "androidx.work:work-runtime-ktx", version.ref = "workRuntimeKtx" }
