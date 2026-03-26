@@ -9,7 +9,7 @@ import com.rajk2007.novacast.mvvm.logError
 import com.rajk2007.novacast.utils.ExtractorLink
 import com.rajk2007.novacast.utils.ExtractorLinkType
 import com.rajk2007.novacast.utils.newExtractorLink
-import torrServer.TorrServer
+// import torrServer.TorrServer
 import java.io.File
 import java.net.ConnectException
 import java.net.URLEncoder
@@ -199,16 +199,17 @@ object Torrent {
 
     /** Spins up the torrent server. */
     private suspend fun setup(dir: String): Boolean {
-        go.Seq.load()
+        // go.Seq.load()
         if (echo()) {
             return true
         }
-        val port = TorrServer.startTorrentServer(dir, 0)
+        // val port = TorrServer.startTorrentServer(dir, 0)
+        val port = -1
         if(port < 0) {
             return false
         }
         TORRENT_SERVER_URL = "http://127.0.0.1:$port"
-        TorrServer.addTrackers(trackers.joinToString(separator = ",\n"))
+        // TorrServer.addTrackers(trackers.joinToString(separator = ",\n"))
         return echo()
     }
 
@@ -306,22 +307,18 @@ object Torrent {
         var data: String?,
         @JsonProperty("timestamp")
         var timestamp: Long,
-        @JsonProperty("name")
-        var name: String?,
         @JsonProperty("hash")
         var hash: String?,
         @JsonProperty("stat")
-        var stat: Int,
+        var stat: Int?,
         @JsonProperty("stat_string")
-        var statString: String,
+        var statString: String?,
         @JsonProperty("loaded_size")
         var loadedSize: Long?,
         @JsonProperty("torrent_size")
         var torrentSize: Long?,
-        @JsonProperty("preloaded_bytes")
-        var preloadedBytes: Long?,
-        @JsonProperty("preload_size")
-        var preloadSize: Long?,
+        @JsonProperty("pre_size")
+        var preSize: Long?,
         @JsonProperty("download_speed")
         var downloadSpeed: Double?,
         @JsonProperty("upload_speed")
@@ -332,61 +329,86 @@ object Torrent {
         var pendingPeers: Int?,
         @JsonProperty("active_peers")
         var activePeers: Int?,
-        @JsonProperty("connected_seeders")
-        var connectedSeeders: Int?,
         @JsonProperty("half_open_peers")
         var halfOpenPeers: Int?,
-        @JsonProperty("bytes_written")
-        var bytesWritten: Long?,
-        @JsonProperty("bytes_written_data")
-        var bytesWrittenData: Long?,
-        @JsonProperty("bytes_read")
-        var bytesRead: Long?,
-        @JsonProperty("bytes_read_data")
-        var bytesReadData: Long?,
-        @JsonProperty("bytes_read_useful_data")
-        var bytesReadUsefulData: Long?,
-        @JsonProperty("chunks_written")
-        var chunksWritten: Long?,
-        @JsonProperty("chunks_read")
-        var chunksRead: Long?,
-        @JsonProperty("chunks_read_useful")
-        var chunksReadUseful: Long?,
-        @JsonProperty("chunks_read_wasted")
-        var chunksReadWasted: Long?,
-        @JsonProperty("pieces_dirtied_good")
-        var piecesDirtiedGood: Long?,
-        @JsonProperty("pieces_dirtied_bad")
-        var piecesDirtiedBad: Long?,
-        @JsonProperty("duration_seconds")
-        var durationSeconds: Double?,
-        @JsonProperty("bit_rate")
-        var bitRate: String?,
-        @JsonProperty("file_stats")
-        var fileStats: List<TorrentFileStat>?,
-        @JsonProperty("trackers")
-        var trackers: List<String>?,
+        @JsonProperty("connected_seeders")
+        var connectedSeeders: Int?,
+        @JsonProperty("files")
+        var files: Array<TorrentFile>?,
     ) {
         fun streamUrl(url: String): String {
-            val fileName =
-                this.fileStats?.first { !it.path.isNullOrBlank() }?.path
-                    ?: throw ErrorLoadingException("Null path")
+            if(TORRENT_SERVER_URL.isEmpty()) {
+                return url
+            }
+            return "$TORRENT_SERVER_URL/stream/${URLEncoder.encode(url, "UTF-8")}?index=0&play"
+        }
 
-            val index = url.substringAfter("index=").substringBefore("&").toIntOrNull() ?: 0
+        override fun equals(other: Any?): Boolean {
+            if (this === other) return true
+            if (javaClass != other?.javaClass) return false
 
-            //  https://github.com/Diegopyl1209/torrentserver-aniyomi/blob/c18f58e51b6738f053261bc863177078aa9c1c98/web/api/stream.go#L18
-            return "$TORRENT_SERVER_URL/stream/${
-                URLEncoder.encode(fileName, "utf-8")
-            }?link=${this.hash}&index=$index&play"
+            other as TorrentStatus
+
+            if (title != other.title) return false
+            if (poster != other.poster) return false
+            if (data != other.data) return false
+            if (timestamp != other.timestamp) return false
+            if (hash != other.hash) return false
+            if (stat != other.stat) return false
+            if (statString != other.statString) return false
+            if (loadedSize != other.loadedSize) return false
+            if (torrentSize != other.torrentSize) return false
+            if (preSize != other.preSize) return false
+            if (downloadSpeed != other.downloadSpeed) return false
+            if (uploadSpeed != other.uploadSpeed) return false
+            if (totalPeers != other.totalPeers) return false
+            if (pendingPeers != other.pendingPeers) return false
+            if (activePeers != other.activePeers) return false
+            if (halfOpenPeers != other.halfOpenPeers) return false
+            if (connectedSeeders != other.connectedSeeders) return false
+            if (files != null) {
+                if (other.files == null) return false
+                if (!files.contentEquals(other.files)) return false
+            } else if (other.files != null) return false
+
+            return true
+        }
+
+        override fun hashCode(): Int {
+            var result = title.hashCode()
+            result = 31 * result + poster.hashCode()
+            result = 31 * result + (data?.hashCode() ?: 0)
+            result = 31 * result + timestamp.hashCode()
+            result = 31 * result + (hash?.hashCode() ?: 0)
+            result = 31 * result + (stat ?: 0)
+            result = 31 * result + (statString?.hashCode() ?: 0)
+            result = 31 * result + (loadedSize?.hashCode() ?: 0)
+            result = 31 * result + (torrentSize?.hashCode() ?: 0)
+            result = 31 * result + (preSize?.hashCode() ?: 0)
+            result = 31 * result + (downloadSpeed?.hashCode() ?: 0)
+            result = 31 * result + (uploadSpeed?.hashCode() ?: 0)
+            result = 31 * result + (totalPeers ?: 0)
+            result = 31 * result + (pendingPeers ?: 0)
+            result = 31 * result + (activePeers ?: 0)
+            result = 31 * result + (halfOpenPeers ?: 0)
+            result = 31 * result + (connectedSeeders ?: 0)
+            result = 31 * result + (files?.contentHashCode() ?: 0)
+            return result
         }
     }
 
-    data class TorrentFileStat(
-        @JsonProperty("id")
-        val id: Int?,
+    // https://github.com/Diegopyl1209/torrentserver-aniyomi/blob/c18f58e51b6738f053261bc863177078aa9c1c98/torr/state/state.go#L112
+    data class TorrentFile(
+        @JsonProperty("index")
+        var index: Int,
         @JsonProperty("path")
-        val path: String?,
+        var path: String,
         @JsonProperty("length")
-        val length: Long?,
+        var length: Long,
+    )
+
+    data class TorrentName(
+        val name: String,
+        val url: String,
     )
 }
