@@ -62,7 +62,7 @@
     <string name="subs_edge_type">윤곽선 유형</string>
     <string name="subs_subtitle_elevation">자막 높이</string>
     <string name="subs_font">폰트</string>
-    <string name="subs_font_size">자막 크기</string>
+    <string name="subs_font_size">글자 크기</string>
     <string name="downloaded">다운로드됨</string>
     <string name="downloading">다운로드중</string>
     <string name="download_paused">다운로드 일시정지</string>
