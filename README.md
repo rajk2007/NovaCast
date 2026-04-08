@@ -109,3 +109,4 @@ Even if you can't contribute to the code or documentation, we always look for th
 <a href="https://hosted.weblate.org/engage/cloudstream/">
   <img src="https://hosted.weblate.org/widgets/cloudstream/-/app/multi-auto.svg" alt="Translation status" />
 </a>
+ 
