@@ -124,13 +124,13 @@ android {
         }
         create("prerelease") {
             dimension = "state"
-            applicationIdSuffix = ".prerelease"
+            // applicationIdSuffix = ".prerelease"
             if (signingConfigs.names.contains("prerelease")) {
                 signingConfig = signingConfigs.getByName("prerelease")
             } else {
                 logger.warn("No prerelease signing config!")
             }
-            versionNameSuffix = "-PRE"
+            // versionNameSuffix = "-PRE"
             versionCode = (System.currentTimeMillis() / 60000).toInt()
         }
     }
