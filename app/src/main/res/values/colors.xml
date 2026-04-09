@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="ic_launcher_background">#05031A</color>
-    <color name="colorPrimary">#7B2FBE</color>
-    <color name="colorAccent">#00E5FF</color>
-    <color name="colorPrimaryDark">#12121A</color>
+    <color name="ic_launcher_background">#0A0A0F</color>
+    <color name="colorPrimary">#FF00FF</color>
+    <color name="colorAccent">#FF00FF</color>
+    <color name="colorPrimaryDark">#05050A</color>
     <color name="colorBackground">#0A0A0F</color>
 
     <color name="colorPrimarySecond">@color/colorPrimary</color>
     <color name="colorSearch">#303135</color> <!--#3444D1 @color/itemBackground-->
     <color name="colorOngoing">#F53B66</color> <!--FF8181-->
 
-    <color name="primaryGrayBackground">#2B2C30</color> <!--0f0f10 0E0E10 303135 2B2C30-->
-    <color name="primaryBlackBackground">#111111</color> <!--1C1C20 191a1f 19181E 202125 1C1C20-->
-    <color name="iconGrayBackground">#1C1C20</color> <!--141419 202125-->
-    <color name="boxItemBackground">#161616</color> <!-- 17171B 1B1B20-->
+    <color name="primaryGrayBackground">#151525</color> <!--0f0f10 0E0E10 303135 2B2C30-->
+    <color name="primaryBlackBackground">#0A0A0F</color> <!--1C1C20 191a1f 19181E 202125 1C1C20-->
+    <color name="iconGrayBackground">#151525</color> <!--141419 202125-->
+    <color name="boxItemBackground">#1A1A2A</color> <!-- 17171B 1B1B20-->
 
     <color name="textColor">#e9eaee</color> <!--FFF-->
     <color name="grayTextColor">#9ba0a4</color> <!-- 5e5f62-->
@@ -35,9 +35,9 @@
     <color name="dubColorText">#121950</color> <!--3b65f5 f18c82 8294F1-->
     <color name="amoledModeLight">#121213</color>
 
-    <color name="dubColorBg">#3B65F5</color>
+    <color name="dubColorBg">#FF00FF</color>
     <color name="subColorText">#571711</color> <!--F53B66 FA3D79-->
-    <color name="subColorBg">#F53B66</color>
+    <color name="subColorBg">#FF00FF</color>
     <color name="typeColorText">#BEC8FF</color>
     <color name="typeColorBg">#3700B3</color>
 
