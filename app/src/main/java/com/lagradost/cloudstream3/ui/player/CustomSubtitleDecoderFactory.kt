@@ -237,7 +237,7 @@ class CustomDecoder(private val fallbackFormat: Format?) : SubtitleParser {
         val trimmedText =
             data.trimStart { it.isWhitespace() || controlCharsRegex.matches(it.toString()) }
 
-        //https://github.com/LagradOst/CloudStream-2/blob/ddd774ee66810137ff7bd65dae70bcf3ba2d2489/CloudStreamForms/CloudStreamForms/Script/MainChrome.cs#L388
+        //https://github.com/LagradOst/NovaCast-2/blob/ddd774ee66810137ff7bd65dae70bcf3ba2d2489/NovaCastForms/NovaCastForms/Script/MainChrome.cs#L388
         val subtitleParser = when {
             // "WEBVTT" can be hidden behind invisible characters not filtered by trim
             trimmedText.substring(0, 10).contains("WEBVTT", ignoreCase = true) -> WebvttParser()

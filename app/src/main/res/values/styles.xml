@@ -1,7 +1,10 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. Material3 -->
     <style name="AppTheme" parent="Theme.Material3.Dark.NoActionBar">
-        <item name="android:windowBackground">@drawable/splash_background</item>
+        <item name="android:windowBackground">@color/colorBackground</item>
+        <item name="android:colorBackground">@color/colorBackground</item>
+        <item name="colorSurface">@color/colorSurface</item>
+        <item name="android:colorControlHighlight">#40FF4D8D</item> <!-- Premium pink ripple -->
         <item name="android:colorEdgeEffect">?attr/textColor</item>
 
         <item name="android:navigationBarColor">?attr/primaryBlackBackground</item>
@@ -515,6 +518,9 @@
 
     <style name="AppButtonStyle" parent="android:Widget.Holo.Button">
         <item name="android:fontFamily">@font/google_sans</item>
+        <item name="android:background">@drawable/gradient_button</item>
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:elevation">4dp</item>
     </style>
 
     <style name="AppEditStyle" parent="android:Widget.EditText">
@@ -536,6 +542,10 @@
 
     <style name="AppMaterialButtonStyle" parent="Widget.MaterialComponents.Button">
         <item name="android:fontFamily">@font/google_sans</item>
+        <item name="android:background">@drawable/gradient_button</item>
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:elevation">4dp</item>
+        <item name="backgroundTint">@null</item>
     </style>
 
     <style name="Theme.Widget.Tabs" parent="Widget.MaterialComponents.TabLayout.Colored">

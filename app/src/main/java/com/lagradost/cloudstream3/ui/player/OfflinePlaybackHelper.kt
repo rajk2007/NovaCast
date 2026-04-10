@@ -6,7 +6,7 @@ import android.content.Intent
 import android.net.Uri
 import androidx.core.content.ContextCompat.getString
 import com.lagradost.cloudstream3.R
-import com.lagradost.cloudstream3.actions.temp.CloudStreamPackage
+import com.lagradost.cloudstream3.actions.temp.NovaCastPackage
 import com.lagradost.cloudstream3.utils.AppUtils.tryParseJson
 import com.lagradost.cloudstream3.utils.DataStoreHelper
 import com.lagradost.cloudstream3.utils.UIHelper.navigate
@@ -25,19 +25,19 @@ object OfflinePlaybackHelper {
         )
     }
 
-    // See CloudStreamPackage
+    // See NovaCastPackage
     fun playIntent(activity: Activity, intent: Intent?): Boolean {
         if (intent == null) return false
-        val links = intent.getStringArrayExtra(CloudStreamPackage.LINKS_EXTRA)
-            ?.mapNotNull { tryParseJson<CloudStreamPackage.MinimalVideoLink>(it) } ?: emptyList()
+        val links = intent.getStringArrayExtra(NovaCastPackage.LINKS_EXTRA)
+            ?.mapNotNull { tryParseJson<NovaCastPackage.MinimalVideoLink>(it) } ?: emptyList()
         if (links.isEmpty()) return false
-        val subs = intent.getStringArrayExtra(CloudStreamPackage.SUBTITLE_EXTRA)
-            ?.mapNotNull { tryParseJson<CloudStreamPackage.MinimalSubtitleLink>(it) } ?: emptyList()
+        val subs = intent.getStringArrayExtra(NovaCastPackage.SUBTITLE_EXTRA)
+            ?.mapNotNull { tryParseJson<NovaCastPackage.MinimalSubtitleLink>(it) } ?: emptyList()
 
-        val id = intent.getIntExtra(CloudStreamPackage.ID_EXTRA, -1)
-        //val title = intent.getStringExtra(CloudStreamPackage.TITLE_EXTRA) // unused
-        val pos = intent.getLongExtra(CloudStreamPackage.POSITION_EXTRA, -1L)
-        val dur = intent.getLongExtra(CloudStreamPackage.DURATION_EXTRA, -1L)
+        val id = intent.getIntExtra(NovaCastPackage.ID_EXTRA, -1)
+        //val title = intent.getStringExtra(NovaCastPackage.TITLE_EXTRA) // unused
+        val pos = intent.getLongExtra(NovaCastPackage.POSITION_EXTRA, -1L)
+        val dur = intent.getLongExtra(NovaCastPackage.DURATION_EXTRA, -1L)
 
         if (id != -1 && pos != -1L) {
             val duration = if (dur != -1L) {

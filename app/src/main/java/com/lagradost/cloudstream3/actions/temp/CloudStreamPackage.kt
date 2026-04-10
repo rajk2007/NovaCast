@@ -25,15 +25,15 @@ import com.lagradost.cloudstream3.utils.SubtitleHelper.fromLanguageToTagIETF
 import com.lagradost.cloudstream3.utils.txt
 
 /**
- * If you want to support CloudStream 3 as an external player, then this shows how to play any video link
+ * If you want to support NovaCast 3 as an external player, then this shows how to play any video link
  * For basic interactions, just `intent.data = uri` works
  *
- * However for more advanced use, CloudStream 3 also supports playlists of MinimalVideoLink and MinimalSubtitleLink with a `String[]` of JSON
+ * However for more advanced use, NovaCast 3 also supports playlists of MinimalVideoLink and MinimalSubtitleLink with a `String[]` of JSON
  * These are passed as LINKS_EXTRA and SUBTITLE_EXTRA respectively
  */
 @Suppress("Unused")
-class CloudStreamPackage : OpenInAppAction(
-    appName = txt("CloudStream"),
+class NovaCastPackage : OpenInAppAction(
+    appName = txt("NovaCast"),
     packageName = BuildConfig.APPLICATION_ID, //"com.lagradost.cloudstream3" or "com.lagradost.cloudstream3.prerelease"
     intentClass = "com.lagradost.cloudstream3.ui.player.DownloadedPlayerActivity"
 ) {

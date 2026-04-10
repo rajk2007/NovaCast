@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ripple xmlns:android="http://schemas.android.com/apk/res/android"
+    android:color="#40FF4D8D"> <!-- Light pink ripple -->
+    <item>
+        <shape android:shape="rectangle">
+            <gradient
+                android:angle="45"
+                android:startColor="#8A2BE2"
+                android:centerColor="#FF4D8D"
+                android:endColor="#FF7A18"
+                android:type="linear" />
+            <corners android:radius="16dp" />
+        </shape>
+    </item>
+</ripple>
