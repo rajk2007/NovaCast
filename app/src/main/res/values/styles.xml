@@ -4,8 +4,8 @@
         <item name="android:windowBackground">@drawable/splash_background</item>
         <item name="android:colorEdgeEffect">?attr/textColor</item>
 
-        <item name="android:navigationBarColor">?attr/primaryBlackBackground</item>
-        <item name="android:statusBarColor">?attr/iconGrayBackground</item>
+        <item name="android:navigationBarColor">@color/colorBackground</item>
+        <item name="android:statusBarColor">@color/colorBackground</item>
 
         <item name="android:windowTranslucentStatus">true</item>
         <item name="android:windowTranslucentNavigation">false</item>
@@ -54,12 +54,12 @@
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
         <item name="textColor">@color/textColor</item>
-        <item name="colorOnPrimary">@color/whiteText</item>
-        <item name="grayTextColor">@color/grayTextColor</item>
-        <item name="primaryGrayBackground">@color/primaryGrayBackground</item>
-        <item name="primaryBlackBackground">@color/primaryBlackBackground</item>
-        <item name="iconGrayBackground">@color/iconGrayBackground</item>
-        <item name="boxItemBackground">@color/boxItemBackground</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="grayTextColor">@color/textColorSecondary</item>
+        <item name="primaryGrayBackground">@color/colorSurface</item>
+        <item name="primaryBlackBackground">@color/colorBackground</item>
+        <item name="iconGrayBackground">@color/colorSurface</item>
+        <item name="boxItemBackground">@color/colorSurface</item>
         <item name="iconColor">@color/iconColor</item>
         <item name="white">@color/white</item>
         <item name="black">@color/black</item>
