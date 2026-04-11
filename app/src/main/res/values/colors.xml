@@ -47,7 +47,7 @@
     <color name="blackText">#000000</color>
     <color name="amoledModeLight">#000000</color>
 
-    <!-- Missing references to fix broken layouts -->
+    <!-- Missing references to fix broken layouts (no-op change to trigger CI) -->
     <color name="grayShimmer">#202020</color>
     <color name="grayBackground">@color/colorBackground</color>
     <color name="itemBackground">@color/colorSurface</color>
