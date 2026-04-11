@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:gravity="center">
+
+    <!-- App Icon -->
+    <ImageView
+        android:id="@+id/appIconImage"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginBottom="32dp"
+        android:contentDescription="@string/app_name"
+        android:src="@mipmap/ic_launcher" />
+
+    <!-- Title -->
+    <TextView
+        android:id="@+id/titleText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Enjoying NovaCast?"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="16dp"
+        android:gravity="center"
+        android:textColor="?attr/textColorPrimary" />
+
+    <!-- Subtitle -->
+    <TextView
+        android:id="@+id/subtitleText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Support us by starring our GitHub — it helps us keep MegaRepo, PhisherRepo and more plugins alive and updated for you!"
+        android:textSize="16sp"
+        android:layout_marginBottom="48dp"
+        android:gravity="center"
+        android:textColor="?attr/textColorSecondary" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <!-- Primary Button: Star on GitHub -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/starButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="⭐ Star on GitHub"
+        android:textSize="16sp"
+        android:layout_marginBottom="12dp" />
+
+    <!-- Secondary Button: Maybe Later -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/skipButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Maybe Later"
+        android:textSize="16sp"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton" />
+
+</LinearLayout>
