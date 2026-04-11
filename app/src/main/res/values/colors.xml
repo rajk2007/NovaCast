@@ -51,11 +51,7 @@
     <color name="grayShimmer">#202020</color>
     <color name="grayBackground">@color/colorBackground</color>
     <color name="itemBackground">@color/colorSurface</color>
-    <color name="player_on_button_tv_attr">#FFFFFF</color>
     <color name="skipOpTransparent">#4D000000</color>
-    <color name="player_button_tv">#FFFFFF</color>
-    <color name="item_select_color">@color/colorPrimary</color>
-    <color name="toggle_selector">@color/colorPrimary</color>
 
     <!-- Restored from main for compatibility -->
     <color name="colorSecondary">#FF4D8D</color>
