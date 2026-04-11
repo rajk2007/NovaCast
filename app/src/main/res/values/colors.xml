@@ -1,56 +1,74 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- Premium Palette -->
-    <color name="colorBackground">#0A0A0F</color>
-    <color name="colorSurface">#151525</color>
-    <color name="colorPrimary">#8A2BE2</color>
-    <color name="colorSecondary">#FF4D8D</color>
-    <color name="colorAccent">#FF7A18</color>
-    <color name="colorOnPrimary">#FFFFFF</color>
-    <color name="colorOnBackground">#EAEAF0</color>
-    
-    <!-- Legacy/Compatibility Mapping -->
-    <color name="ic_launcher_background">#0A0A0F</color>
-    <color name="colorPrimaryDark">#05050A</color>
-    <color name="primaryGrayBackground">#151525</color>
-    <color name="primaryBlackBackground">#0A0A0F</color>
-    <color name="iconGrayBackground">#151525</color>
-    <color name="boxItemBackground">#1A1A2A</color>
-    <color name="textColor">#EAEAF0</color>
-    <color name="grayTextColor">#9BA0A4</color>
-    <color name="whiteText">#FFFFFF</color>
-    <color name="blackText">#000000</color>
+    <!-- App Icon Colors -->
+    <color name="ic_launcher_background">#0B0B0F</color>
+
+    <!-- Core Netflix-inspired Palette -->
+    <color name="colorPrimary">#E50914</color> <!-- Netflix Red -->
+    <color name="colorPrimaryDark">#0B0B0F</color>
+    <color name="colorAccent">#E50914</color>
+    <color name="colorBackground">#0B0B0F</color>
+    <color name="colorSurface">#121218</color>
+
+    <!-- Text Hierarchy -->
+    <color name="textColor">#FFFFFF</color>
+    <color name="textColorSecondary">#B3B3B3</color>
+    <color name="textColorTertiary">#808080</color>
+
+    <!-- UI Elements -->
+    <color name="colorSearch">#1F1F23</color>
+    <color name="colorOngoing">#E50914</color>
+    <color name="boxItemBackground">#121218</color>
+    <color name="iconColor">#E5E5E5</color>
+    <color name="transparent">#00000000</color>
     <color name="white">#FFFFFF</color>
     <color name="black">#000000</color>
-    <color name="transparent">#00000000</color>
-    
-    <!-- Functional Colors -->
-    <color name="colorSearch">#303135</color>
-    <color name="colorOngoing">#F53B66</color>
-    <color name="grayShimmer">#DCDCDC</color>
-    <color name="searchColorTransparent">#1AFFFFFF</color>
     <color name="gray_200">#EEEEEE</color>
     <color name="gray_400">#BDBDBD</color>
-    <color name="progressBackgroundColor">#1AFFFFFF</color>
+
+    <!-- Functional Colors -->
+    <color name="colorTestPass">#46D369</color>
+    <color name="colorTestFail">#E50914</color>
+    <color name="colorTestWarning">#FFA000</color>
+    <color name="progressBackgroundColor">#33FFFFFF</color>
+    <color name="video_ripple">#40FFFFFF</color>
+    <color name="video_button_ripple">#20FFFFFF</color>
+    <color name="black_overlay">#99000000</color>
+    <color name="darkBar">#0B0B0F</color>
+    <color name="videoProgress">#E50914</color>
+
+    <!-- Legacy / Required References (Mapped to new system) -->
+    <color name="colorPrimarySecond">@color/colorPrimary</color>
+    <color name="primaryGrayBackground">@color/colorSurface</color>
+    <color name="primaryBlackBackground">@color/colorBackground</color>
+    <color name="iconGrayBackground">@color/colorSurface</color>
+    <color name="grayTextColor">@color/textColorSecondary</color>
+    <color name="whiteText">#FFFFFF</color>
+    <color name="blackText">#000000</color>
+    <color name="amoledModeLight">#000000</color>
+
+    <!-- Missing references to fix broken layouts (no-op change to trigger CI) -->
+    <color name="grayShimmer">#202020</color>
+    <color name="grayBackground">@color/colorBackground</color>
+    <color name="itemBackground">@color/colorSurface</color>
+    <color name="skipOpTransparent">#4D000000</color>
+
+    <!-- Restored from main for compatibility -->
+    <color name="colorSecondary">#FF4D8D</color>
+    <color name="colorOnPrimary">#FFFFFF</color>
+    <color name="colorOnBackground">#EAEAF0</color>
+    <color name="searchColorTransparent">#1AFFFFFF</color>
     <color name="dubColorText">#121950</color>
-    <color name="amoledModeLight">#121213</color>
     <color name="dubColorBg">#8A2BE2</color>
     <color name="subColorText">#571711</color>
     <color name="subColorBg">#FF4D8D</color>
     <color name="typeColorText">#BEC8FF</color>
     <color name="typeColorBg">#3700B3</color>
     <color name="adultColor">#FF6F63</color>
-    <color name="video_ripple">#80FFFFFF</color>
-    <color name="video_button_ripple">#32FFFFFF</color>
-    <color name="black_overlay">#66000000</color>
     <color name="darkBarTransparent">#C0121212</color>
-    <color name="skipOpTransparent">#4D121212</color>
-    <color name="darkBar">#121212</color>
-    <color name="videoProgress">#66B5B5B5</color>
-    <color name="iconColor">#9BA0A6</color>
     <color name="playIconBackground">#B3000000</color>
 
-    <!-- Theme Overrides (Restored for compatibility) -->
+    <!-- Theme Overrides -->
     <color name="lightPrimaryGrayBackground">#F1F1F1</color>
     <color name="lightBitDarkerGrayBackground">#FFFFFF</color>
     <color name="lightGrayBackground">#EEEEEE</color>
@@ -102,7 +120,4 @@
     <color name="colorPrimaryDandelionYellow">#F5BB00</color>
     <color name="colorPrimaryCoolBlue">#408CAC</color>
     <color name="colorPrimaryLavender">#6F55AF</color>
-    <color name="colorTestPass">#48E484</color>
-    <color name="colorTestFail">#EA596E</color>
-    <color name="colorTestWarning">#FF9800</color>
 </resources>

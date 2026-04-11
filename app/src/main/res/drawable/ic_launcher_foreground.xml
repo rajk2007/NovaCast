@@ -5,24 +5,7 @@
     android:height="108dp"
     android:viewportWidth="108"
     android:viewportHeight="108">
-    <!-- Centered N logo with safe zone padding -->
-    <group
-        android:translateX="21"
-        android:translateY="21">
-        <path
-            android:pathData="M11.62,10.02 C11.62,10.02 24.53,27.56 33.15,39.25 C33.15,39.25 33.15,10.02 33.15,10.02 C33.15,10.02 41.38,10.02 41.38,10.02 C41.38,10.02 41.38,55.98 41.38,55.98 C41.38,55.98 33.15,55.98 33.15,55.98 C33.15,55.98 20.24,38.44 11.62,26.75 C11.62,26.75 11.62,55.98 11.62,55.98 C11.62,55.98 3.39,55.98 3.39,55.98 C3.39,55.98 3.39,10.02 3.39,10.02 C3.39,10.02 11.62,10.02 11.62,10.02 Z">
-            <aapt:attr name="android:fillColor">
-                <gradient
-                    android:startX="3.39"
-                    android:startY="10.02"
-                    android:endX="41.38"
-                    android:endY="55.98"
-                    android:type="linear">
-                    <item android:offset="0" android:color="#8A2BE2"/>
-                    <item android:offset="0.5" android:color="#FF4D8D"/>
-                    <item android:offset="1" android:color="#FF7A18"/>
-                </gradient>
-            </aapt:attr>
-        </path>
-    </group>
+  <path
+      android:fillColor="#E50914"
+      android:pathData="M32,24 L32,84 L44,84 L44,48 L64,84 L76,84 L76,24 L64,24 L64,60 L44,24 Z"/>
 </vector>

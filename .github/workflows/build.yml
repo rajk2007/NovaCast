@@ -1,7 +1,12 @@
 name: Build NovaCast APK
 on:
   push:
-    branches: [ main, master ]
+    branches:
+      - main
+      - ui-rebrand-v2
+  pull_request:
+    branches:
+      - main
   workflow_dispatch:
 
 jobs:
