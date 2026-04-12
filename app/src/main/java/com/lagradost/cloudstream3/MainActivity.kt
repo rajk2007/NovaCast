@@ -1882,12 +1882,10 @@ class MainActivity : AppCompatActivity(), ColorPickerDialogListener, BiometricCa
         }*/
 
 
-/*
         if (!checkWrite()) {
             requestRW()
             if (checkWrite()) return
         }
-*/
         //CastButtonFactory.setUpMediaRouteButton(this, media_route_button)
 
         // THIS IS CURRENTLY REMOVED BECAUSE HIGHER VERS OF ANDROID NEEDS A NOTIFICATION
@@ -2009,10 +2007,7 @@ class MainActivity : AppCompatActivity(), ColorPickerDialogListener, BiometricCa
 
         try {
             if (getKey(HAS_DONE_SETUP_KEY, false) != true) {
-                navController.navigate(
-                    R.id.navigation_setup_extensions,
-                    SetupFragmentExtensions.newInstance(true)
-                )
+                navController.navigate(R.id.navigation_setup_language)
                 // If no plugins bring up extensions screen
             } else if (PluginManager.getPluginsOnline().isEmpty()
                 && PluginManager.getPluginsLocal().isEmpty()
@@ -2021,13 +2016,13 @@ class MainActivity : AppCompatActivity(), ColorPickerDialogListener, BiometricCa
                 navController.navigate(
                     R.id.navigation_setup_extensions,
                     SetupFragmentExtensions.newInstance(false)
- /*
-        try {
-            requestRW()
+                )
+            }
         } catch (e: Exception) {
             logError(e)
         }
-*/     Used to check current focus for TV
+
+//        Used to check current focus for TV
 //        main {
 //            while (true) {
 //                delay(5000)

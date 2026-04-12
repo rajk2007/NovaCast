@@ -587,8 +587,7 @@
             app:popExitAnim="@anim/exit_anim" />
     </fragment>
 
-    <!-- Removed language screen -->
-    <!-- <fragment
+    <fragment
         android:id="@+id/navigation_setup_language"
         android:name="com.lagradost.cloudstream3.ui.setup.SetupFragmentLanguage"
         android:layout_height="match_parent"
@@ -604,7 +603,7 @@
             app:exitAnim="@anim/exit_anim"
             app:popEnterAnim="@anim/enter_anim"
             app:popExitAnim="@anim/exit_anim" />
-    </fragment> -->
+    </fragment>
 
     <action
         android:id="@+id/action_navigation_global_to_navigation_setup_extensions"
@@ -673,7 +672,7 @@
         tools:layout="@layout/fragment_setup_media">
         <action
             android:id="@+id/navigation_setup_media_to_navigation_setup_layout"
-            app:destination="@id/navigation_setup_github_star"
+            app:destination="@id/navigation_setup_layout"
             app:enterAnim="@anim/enter_anim"
             app:exitAnim="@anim/exit_anim"
             app:popEnterAnim="@anim/enter_anim"
@@ -701,13 +700,4 @@
         android:name="com.lagradost.cloudstream3.ui.EasterEggMonkeFragment"
         android:label="EasterEggMonkeFragment"
         tools:layout="@layout/fragment_easter_egg_monke" />
-<fragment
-    android:id="@+id/navigation_setup_github_star"
-    android:name="com.lagradost.cloudstream3.ui.setup.GithubStarFragment"
-    android:label="GithubStarFragment"
-    tools:layout="@layout/fragment_setup_github_star">
-    <action
-        android:id="@+id/action_navigation_setup_github_star_to_navigation_setup_layout"
-        app:destination="@id/navigation_setup_layout" />
-</fragment>
 </navigation>
