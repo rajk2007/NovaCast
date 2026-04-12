@@ -680,6 +680,16 @@
     </fragment>
 
     <fragment
+        android:id="@+id/navigation_setup_github_star"
+        android:name="com.lagradost.cloudstream3.ui.setup.GithubStarFragment"
+        android:label="GithubStarFragment"
+        tools:layout="@layout/fragment_setup_github_star">
+        <action
+            android:id="@+id/action_navigation_setup_github_star_to_navigation_setup_layout"
+            app:destination="@id/navigation_setup_layout" />
+    </fragment>
+
+    <fragment
         android:id="@+id/navigation_setup_layout"
         android:name="com.lagradost.cloudstream3.ui.setup.SetupFragmentLayout"
         android:layout_height="match_parent"
