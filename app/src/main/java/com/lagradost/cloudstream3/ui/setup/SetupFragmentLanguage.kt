@@ -73,6 +73,8 @@ class SetupFragmentLanguage : BaseFragment<FragmentSetupLanguageBinding>(
                     }
                 }
 
+                // Auto-skip language screen
+                findNavController().navigate(R.id.action_navigation_setup_language_to_navigation_setup_extensions)
                 nextBtt.setOnClickListener {
                     // If no plugins go to plugins page
                     val nextDestination = if (
